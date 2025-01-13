@@ -1,4 +1,4 @@
-# Longest Commin Prefix
+# Longest Common Prefix
 
 ``` JAVASCRIPT
 /**
