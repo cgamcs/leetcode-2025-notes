@@ -1,3 +1,5 @@
+# Roman to Integer
+
 ``` JAVASCRIPT
 /**
  * @param {string} s
@@ -22,8 +24,6 @@ var romanToInt = function(s) {
     return total
 };
 ```
-
-La solución para el problema Roman to Integer convierte un número en formato romano a un número entero utilizando un enfoque basado en iteración y comparación de valores.
 
 **Explicación:**
 

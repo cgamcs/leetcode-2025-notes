@@ -1,3 +1,5 @@
+# Two Sum
+
 ``` JAVASCRIPT
 /**
  * @param {number[]} nums
@@ -19,8 +21,6 @@ var twoSum = function(nums, target) {
     }
 };
 ```
-
-Esta solución utiliza un enfoque basado en un hash map para resolver el problema Two Sum de manera más eficiente.
 
 **Explicación:**
 
