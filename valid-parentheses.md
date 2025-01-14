@@ -6,23 +6,23 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-    const mappings = new Map()
+    const mappings = new Map() // Mapeo de pares de apertura y cierre
 
     mappings.set('(', ')')
     mappings.set('{', '}')
     mappings.set('[', ']')
 
-    const stack = []
+    const stack = [] // Pila para rastrear los paréntesis de apertura
 
-    for(let i = 0; i < s.length; i++) {
-        if(mappings.has(s[i])) {
-            stack.push(mappings.get(s[i]))
-        } else if (stack.pop() !== s[i]) {
-            return false
+    for(let i = 0; i < s.length; i++) { // Iteramos sobre cada carácter de la cadena
+        if(mappings.has(s[i])) { // Si el carácter es un paréntesis de apertura
+            stack.push(mappings.get(s[i])) // Agregamos el cierre esperado a la pila
+        } else if (stack.pop() !== s[i]) { // Si es un paréntesis de cierre
+            return false // Comparamos con el último cierre esperado. Si no coincide, es inválido
         }
     }
 
-    return stack.length === 0
+    return stack.length === 0 // Si la pila está vacía, la cadena es válida
 };
 ```
 

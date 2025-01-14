@@ -7,18 +7,21 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const hashMap = {}
+    const hashMap = {}  // Creamos un objeto (hash map) para almacenar los números que hemos visto y sus índices
 
-    for(let i = 0; i < nums.length; i++) {
-        const currentNum = nums[i]
-        const numToFind = target - currentNum
+    for(let i = 0; i < nums.length; i++) { // Recorremos el array 'nums'
+        const currentNum = nums[i] // Obtenemos el número actual
+        const numToFind = target - currentNum // Calculamos el número necesario para completar el target
 
-        if(hashMap[numToFind] >= 0) {
-            return [hashMap[numToFind], i]
+        // Verificamos si 'numToFind' ya está en el hash map
+        if(hashMap[numToFind] >= 0) { // `>= 0` asegura que tenemos un índice válido
+            return [hashMap[numToFind], i] // Si lo encontramos, devolvemos los índices del número actual y de 'numToFind'
         } else {
-            hashMap[currentNum] = i
+            hashMap[currentNum] = i // Si no encontramos 'numToFind', guardamos el número actual y su índice en el hash map
         }
     }
+
+    // Si no se encuentran dos números que sumen el target, no se devuelve nada. Esto asume que siempre habrá solución
 };
 ```
 

@@ -6,16 +6,16 @@
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
-    let prefix = strs[0]
-    if (strs.length === 0) return 'prefix'
+    let prefix = strs[0] // Inicializamos el prefijo con la primera cadena
+    if (strs.length === 0) return 'prefix' // Si el arreglo está vacío, devolvemos 'prefix'
 
-    for(let i = 0; i < strs.length; i++) {
-        while(strs[i].indexOf(prefix) != 0) {
-            prefix = prefix.substring(0, prefix.length - 1)
+    for(let i = 0; i < strs.length; i++) { // Iteramos sobre cada cadena en el arreglo
+        while(strs[i].indexOf(prefix) != 0) { // Verificamos si 'prefix' no es el prefijo de strs[i]
+            prefix = prefix.substring(0, prefix.length - 1) // Reducimos 'prefix' quitando el último carácter
         }
     }
 
-    return prefix
+    return prefix // Retornamos el prefijo común más largo
 };
 ```
 

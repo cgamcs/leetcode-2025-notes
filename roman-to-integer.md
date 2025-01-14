@@ -6,22 +6,30 @@
  * @return {number}
  */
 var romanToInt = function(s) {
-    const symbols = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 }
+    const symbols = { // Diccionario que mapea los símbolos romanos a sus valores enteros
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
 
-    let total = 0
+    let total = 0 // Inicializamos el total en 0
 
-    s.split('').forEach((num, i) => {
-        let curr = s[i]
-        let next = s[i+1]
+    s.split('').forEach((num, i) => { // Dividimos la cadena en un array de caracteres y recorremos cada uno con forEach
+        let curr = s[i] // Símbolo actual
+        let next = s[i+1] // Símbolo siguiente
 
-        if(symbols[curr] < symbols[next]) {
-            total -= symbols[curr]
+        if(symbols[curr] < symbols[next]) { // Comparamos el valor del símbolo actual con el del siguiente
+            total -= symbols[curr] // Si el símbolo actual tiene un valor menor que el siguiente, restamos su valor
         } else {
-            total += symbols[curr]
+            total += symbols[curr] // Si el símbolo actual tiene un valor mayor o igual, sumamos su valor
         }
     })
 
-    return total
+    return total // Devolvemos el total acumulado
 };
 ```
 
