@@ -1,4 +1,4 @@
-# Contains Duplicate
+# 🟢 Contains Duplicate - Easy
 
 ![Contains Duplicate](/img/Contains%20Duplicate.png)
 

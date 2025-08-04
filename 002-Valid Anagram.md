@@ -1,4 +1,4 @@
-# Valid Anagram
+# 🟢 Valid Anagram - Easy
 
 ![Valid Anagram](/img/Valid%20Anagram.png)
 

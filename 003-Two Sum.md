@@ -1,4 +1,4 @@
-# Two Sum
+# 🟢 Two Sum - Easy
 
 ![Two Sum](/img/Two%20Sum.png)
 

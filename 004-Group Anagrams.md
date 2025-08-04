@@ -1,4 +1,4 @@
-# Group Anagrams
+# 🟡 Group Anagrams - Medium
 
 ![Group Anagrams](/img/Group%20Anagrams.png)
 
